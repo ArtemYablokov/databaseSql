@@ -1,6 +1,5 @@
 package com.yablokovs.databasesql.model;
 
-//import jakarta.persistence.*;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,6 +26,11 @@ public class Student {
 //    @SequenceGenerator(name = "sequence_generator")
     @GeneratedValue(/*strategy = GenerationType.TABLE*/)
     private Long id;
+
+    public Student(String name, String sureName) {
+        this.name = name;
+        this.sureName = sureName;
+    }
 
     @Column(name = "name")
     private String name;

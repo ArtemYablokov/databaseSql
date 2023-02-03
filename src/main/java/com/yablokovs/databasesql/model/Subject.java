@@ -20,6 +20,10 @@ public class Subject {
     @GeneratedValue(/*strategy = GenerationType.TABLE*/)
     private Long id;
 
+    public Subject(String name) {
+        this.name = name;
+    }
+
     @Column(name = "name")
     private String name;
     private String tutor;
